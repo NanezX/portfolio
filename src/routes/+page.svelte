@@ -86,8 +86,8 @@
 						<span class="tag">CSS</span>
 					</div>
 					<div class="project-links">
-						<a href="#" class="project-link">View Demo</a>
-						<a href="#" class="project-link">Source Code</a>
+						<a href="https://example.com/demo" class="project-link">View Demo</a>
+						<a href="https://github.com/yourusername/project-one" class="project-link">Source Code</a>
 					</div>
 				</article>
 
@@ -100,8 +100,8 @@
 						<span class="tag">MongoDB</span>
 					</div>
 					<div class="project-links">
-						<a href="#" class="project-link">View Demo</a>
-						<a href="#" class="project-link">Source Code</a>
+						<a href="https://example.com/demo" class="project-link">View Demo</a>
+						<a href="https://github.com/yourusername/project-two" class="project-link">Source Code</a>
 					</div>
 				</article>
 
@@ -114,8 +114,8 @@
 						<span class="tag">JavaScript</span>
 					</div>
 					<div class="project-links">
-						<a href="#" class="project-link">View Demo</a>
-						<a href="#" class="project-link">Source Code</a>
+						<a href="https://example.com/demo" class="project-link">View Demo</a>
+						<a href="https://github.com/yourusername/project-three" class="project-link">Source Code</a>
 					</div>
 				</article>
 			</div>
