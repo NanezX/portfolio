@@ -1,5 +1,8 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.ico';
+	import '../app.css';
+    import Navbar from '$lib/components/Navbar.svelte';
+    import Footer from '$lib/components/Footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -8,10 +11,16 @@
 	<link rel="icon" href={favicon} />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Personal portfolio showcasing my work and skills" />
-	<title>My Portfolio - SvelteKit</title>
+	<title>Portfolio - SvelteKit</title>
 </svelte:head>
 
-{@render children()}
+<div class="flex flex-col min-h-screen">
+    <Navbar />
+    <main class="flex-grow pt-16">
+        {@render children()}
+    </main>
+    <Footer />
+</div>
 
 <style>
 	:global(html) {

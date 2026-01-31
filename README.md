@@ -93,7 +93,7 @@ portfolio/
 │   │   └── +layout.svelte    # Layout with meta tags
 │   ├── lib/
 │   │   └── assets/
-│   │       └── favicon.svg   # Site icon
+│   │       └── favicon.ico   # Site icon
 │   └── app.html              # HTML template
 ├── static/                    # Static files
 ├── package.json
