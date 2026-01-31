@@ -3,6 +3,7 @@
 	import '../app.css';
     import Navbar from '$lib/components/Navbar.svelte';
     import Footer from '$lib/components/Footer.svelte';
+    import BackgroundEffect from '$lib/components/BackgroundEffect.svelte';
 
 	let { children } = $props();
 </script>
@@ -15,6 +16,7 @@
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">
+    <BackgroundEffect />
     <Navbar />
     <main class="flex-grow pt-16">
         {@render children()}
