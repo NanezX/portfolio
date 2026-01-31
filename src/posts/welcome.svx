@@ -1,0 +1,37 @@
+---
+title: Welcome to My Digital Garden
+date: '2025-10-15'
+excerpt: This is the first seed in my new knowledge garden. Here is why I built it.
+tags:
+  - Personal
+  - SvelteKit
+  - Digital Garden
+---
+
+# Hello World
+
+Welcome to my personal corner of the internet. As a developer working in private repositories, I realized I needed a space to document my learning and share my knowledge with the world.
+
+## Why a "Garden"?
+
+Unlike a traditional blog where posts are static and date-based, a [digital garden](https://maggieappleton.com/garden-history) is an evolving collection of ideas. While this "Journal" section acts like a blog, I plan to cultivate it with:
+
+- **Snippets**: Quick code solutions I use often.
+- **Deep Dives**: Explorations into new tech I'm learning.
+- **Reflections**: Thoughts on the software industry.
+
+## Built with joy
+
+This site itself is a playground. It's built with:
+
+1. **SvelteKit**: For that snappy, SPA-like feel.
+2. **TailwindCSS v4**: For rapid styling mechanism.
+3. **MDSvex**: So I can write these posts in Markdown!
+
+```javascript
+// Example code block
+const future = "bright";
+console.log(`The future is ${future}!`);
+```
+
+Stay tuned for more!
