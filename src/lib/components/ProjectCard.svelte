@@ -12,7 +12,7 @@
 
 <a 
   {href} 
-  class="group relative flex flex-col gap-4 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] overflow-hidden"
+  class="group relative flex flex-col gap-4 p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] overflow-hidden"
 >
   <!-- Background Glow -->
   <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -24,15 +24,15 @@
   {/if}
 
   <div class="relative z-10 flex flex-col gap-2">
-    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">{title}</h3>
-    <p class="text-gray-400 leading-relaxed text-sm">
+    <h3 class="text-xl font-bold text-heading group-hover:text-primary transition-colors">{title}</h3>
+    <p class="text-muted leading-relaxed text-sm">
       {description}
     </p>
   </div>
 
   <div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-2">
     {#each tags as tag}
-      <span class="px-3 py-1 text-xs font-medium rounded-full bg-white/5 text-gray-300 border border-white/5 group-hover:border-primary/20 group-hover:text-primary/90 transition-colors">
+      <span class="px-3 py-1 text-xs font-medium rounded-full bg-card text-body border border-border group-hover:border-primary/20 group-hover:text-primary/90 transition-colors">
         {tag}
       </span>
     {/each}
