@@ -1,6 +1,6 @@
 <script lang="ts">
 	import logoIcon from '$lib/assets/logo.png';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
 
 	let isOpen = $state(false);
@@ -29,14 +29,20 @@
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center gap-8">
-      {#each navLinks as link}
+      {#each navLinks as link (link.href)}
+      {@const isActive = page.url.pathname === link.href}
         <a 
           href={link.href} 
-          class="text-sm font-medium tracking-wide transition-colors relative group py-2
-            {$page.url.pathname === link.href ? 'text-white' : 'text-gray-400 hover:text-white'}"
+          class={[
+            "text-sm font-medium tracking-wide transition-colors relative group py-2",
+            {
+              "text-white": isActive,
+              "text-gray-400 hover:text-white": !isActive
+              }
+            ]}
         >
           {link.name}
-          {#if $page.url.pathname === link.href}
+          {#if isActive}
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary shadow-[0_0_10px_var(--color-primary)]"></span>
           {/if}
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full opacity-50"></span>
@@ -57,10 +63,14 @@
   <!-- Mobile Dropdown -->
   {#if isOpen}
     <div class="md:hidden absolute top-full left-0 w-full bg-dark/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl animate-in fade-in slide-in-from-top-4">
-      {#each navLinks as link}
+      {#each navLinks as link (link.href)}
+        {@const isActive = page.url.pathname === link.href}
         <a 
           href={link.href} 
-          class="text-lg font-medium p-2 rounded-lg {$page.url.pathname === link.href ? 'bg-white/5 text-primary' : 'text-gray-300 hover:bg-white/5'}"
+          class={["text-lg font-medium p-2 rounded-lg",{
+            "bg-white/5 text-primary": isActive,
+            "text-gray-300 hover:bg-white/5": !isActive
+          }]}
           onclick={() => isOpen = false}
         >
           {link.name}
