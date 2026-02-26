@@ -20,12 +20,12 @@
         HI THERE 👋
       </h2>
       
-      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-tight">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-heading leading-tight">
         Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient bg-300pct">digital experiences</span><br />
         that spark joy.
       </h1>
       
-      <p class="text-xl text-gray-400 max-w-2xl leading-relaxed mx-auto md:mx-0">
+      <p class="text-xl text-muted max-w-2xl leading-relaxed mx-auto md:mx-0">
         I'm a full-stack developer specializing in building exceptional digital experiences. 
         Currently focused on accessible, human-centered products.
       </p>
@@ -34,7 +34,7 @@
         <a href="#projects" class="px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
           View Projects
         </a>
-        <a href="/about" class="px-8 py-4 bg-white/5 text-white rounded-full font-semibold hover:bg-white/10 transition-all border border-white/10 hover:border-white/20">
+        <a href="/about" class="px-8 py-4 bg-card text-heading rounded-full font-semibold hover:bg-border transition-all border border-border hover:border-border-hover">
           About Me
         </a>
       </div>

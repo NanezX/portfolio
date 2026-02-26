@@ -39,7 +39,7 @@
 	<!-- Floating Icons -->
 	{#each floatingItems as item (item.id)}
 		<div
-			class="absolute text-white floating-icon"
+			class="absolute text-icon floating-icon"
 			style="
                 --x: {item.x}%; 
                 --y: {item.y}%; 
