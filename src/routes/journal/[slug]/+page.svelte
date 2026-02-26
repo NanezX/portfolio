@@ -10,7 +10,7 @@
 
 <article class="max-w-3xl mx-auto px-6 py-20">
     <header class="mb-12 text-center">
-        <div class="flex items-center justify-center gap-4 text-sm text-gray-500 mb-6 font-mono">
+        <div class="flex items-center justify-center gap-4 text-sm text-faint mb-6 font-mono">
             <time>{data.meta.date}</time>
             <span>•</span>
             <div class="flex gap-2">
@@ -20,16 +20,16 @@
             </div>
         </div>
         
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        <h1 class="text-4xl md:text-5xl font-bold text-heading mb-6 leading-tight">
             {data.meta.title}
         </h1>
         
-        <p class="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-xl text-muted leading-relaxed max-w-2xl mx-auto">
             {data.meta.excerpt}
         </p>
     </header>
 
-    <div class="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/5">
+    <div class="prose prose-lg max-w-none prose-headings:text-heading prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-pre:bg-card prose-pre:border prose-pre:border-border">
         <data.content />
     </div>
 </article>

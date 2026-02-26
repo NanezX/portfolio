@@ -29,10 +29,10 @@
 <section id="projects" class="py-20 max-w-7xl mx-auto px-6">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
         <div>
-            <h2 class="text-3xl font-bold text-white mb-2">Featured Work</h2>
-            <p class="text-gray-400">A selection of my recent projects.</p>
+            <h2 class="text-3xl font-bold text-heading mb-2">Featured Work</h2>
+            <p class="text-muted">A selection of my recent projects.</p>
         </div>
-        <a href="https://github.com" target="_blank" class="text-primary hover:text-white transition-colors flex items-center gap-2 group">
+        <a href="https://github.com" target="_blank" class="text-primary hover:text-heading transition-colors flex items-center gap-2 group">
             View all on GitHub 
             <span class="group-hover:translate-x-1 transition-transform">→</span>
         </a>

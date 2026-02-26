@@ -11,32 +11,32 @@
 
 <div class="max-w-4xl mx-auto px-6 py-20">
     <header class="mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Journal</h1>
-        <p class="text-gray-400 text-lg">Thoughts, tutorials, and snippets.</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-heading mb-4">Journal</h1>
+        <p class="text-muted text-lg">Thoughts, tutorials, and snippets.</p>
     </header>
 
     {#if data.posts.length === 0}
-        <p class="text-gray-500 text-center py-20">No posts yet. Stay tuned!</p>
+        <p class="text-faint text-center py-20">No posts yet. Stay tuned!</p>
     {:else}
         <div class="space-y-6">
             {#each data.posts as post}
                 <a href={`/journal/${post.slug}`} class="block group">
-                    <article class="p-8 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
+                    <article class="p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
                         <!-- Meta row -->
-                        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3 font-mono">
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-faint mb-3 font-mono">
                             <time>{post.date}</time>
-                            <span class="text-white/10">|</span>
+                            <span class="text-border">|</span>
                             <span class="flex items-center gap-1">
                                 <Clock size={13} />
                                 {post.readingTime}
                             </span>
                         </div>
 
-                        <h2 class="text-2xl font-bold text-white group-hover:text-primary transition-colors mb-2">
+                        <h2 class="text-2xl font-bold text-heading group-hover:text-primary transition-colors mb-2">
                             {post.title}
                         </h2>
 
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-muted leading-relaxed mb-4">
                             {post.excerpt}
                         </p>
 
