@@ -1,29 +1,63 @@
 <script lang="ts">
-    import type { PageData } from './$types';
+    import { Clock, Tag } from 'lucide-svelte';
     
-    let { data } = $props<{ data: PageData }>();
+    let { data } = $props();
 </script>
 
-<div class="max-w-4xl mx-auto px-6 py-20">
-    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Journal</h1>
-    <p class="text-gray-400 mb-12 text-lg">Thoughts, tutorials, and snippets.</p>
+<svelte:head>
+    <title>Journal – Portfolio</title>
+    <meta name="description" content="Thoughts, tutorials, and snippets from my journey as a developer." />
+</svelte:head>
 
-    <div class="space-y-8">
-        {#each data.posts as post}
-            <article class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/30 transition-colors group cursor-pointer">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                    <h2 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">
-                        <a href={`/journal/${post.slug}`}>{post.title}</a>
-                    </h2>
-                    <time class="text-sm text-gray-500 font-mono">{post.date}</time>
-                </div>
-                <p class="text-gray-400 leading-relaxed mb-4">
-                    {post.excerpt}
-                </p>
-                <div class="flex items-center gap-2 text-primary font-medium text-sm">
-                    Read more <span class="group-hover:translate-x-1 transition-transform">→</span>
-                </div>
-            </article>
-        {/each}
-    </div>
+<div class="max-w-4xl mx-auto px-6 py-20">
+    <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Journal</h1>
+        <p class="text-gray-400 text-lg">Thoughts, tutorials, and snippets.</p>
+    </header>
+
+    {#if data.posts.length === 0}
+        <p class="text-gray-500 text-center py-20">No posts yet. Stay tuned!</p>
+    {:else}
+        <div class="space-y-6">
+            {#each data.posts as post}
+                <a href={`/journal/${post.slug}`} class="block group">
+                    <article class="p-8 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
+                        <!-- Meta row -->
+                        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3 font-mono">
+                            <time>{post.date}</time>
+                            <span class="text-white/10">|</span>
+                            <span class="flex items-center gap-1">
+                                <Clock size={13} />
+                                {post.readingTime}
+                            </span>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-white group-hover:text-primary transition-colors mb-2">
+                            {post.title}
+                        </h2>
+
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            {post.excerpt}
+                        </p>
+
+                        <div class="flex items-center justify-between gap-4">
+                            <!-- Tags -->
+                            {#if post.tags?.length}
+                                <div class="flex flex-wrap gap-1.5">
+                                    {#each post.tags as tag}
+                                        <span class="px-2.5 py-0.5 text-xs font-medium rounded-full bg-primary/10 text-primary/80 border border-primary/10">
+                                            {tag}
+                                        </span>
+                                    {/each}
+                                </div>
+                            {/if}
+                            <span class="text-primary font-medium text-sm flex items-center gap-1 shrink-0">
+                                Read more <span class="group-hover:translate-x-1 transition-transform">→</span>
+                            </span>
+                        </div>
+                    </article>
+                </a>
+            {/each}
+        </div>
+    {/if}
 </div>
