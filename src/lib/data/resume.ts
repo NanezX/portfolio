@@ -51,7 +51,14 @@ export interface Education {
 
 export interface Skill {
   name: string;
-  category: "Frontend" | "Backend" | "Tools" | "Design" | "Other";
+  category:
+    | "Languages"
+    | "Frontend"
+    | "Backend"
+    | "Blockchain"
+    | "AI / ML"
+    | "Cloud / Infra"
+    | "Other";
 }
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -89,89 +96,207 @@ export function formatDuration(start: string, end: string): string {
 
 export const experiences: Experience[] = [
   {
-    company: "Tech Corp",
-    companyUrl: "https://example.com",
-    role: "Senior Frontend Developer",
+    company: "Hypercycle",
+    companyUrl: "https://hypercycle.ai",
+    role: "Software Engineer",
     type: "Full-time",
-    location: "San Francisco, CA",
-    startDate: "Mar 2023",
+    location: "Remote",
+    startDate: "Nov 2024",
     endDate: "Present",
     summary:
-      "Leading the frontend team in building scalable web applications used by 50k+ daily users.",
+      "Joined as Python backend developer and grew into a cross-functional role covering infrastructure, AI, and product engineering.",
     achievements: [
-      "Architected a component library adopted across 4 product teams, reducing UI inconsistencies by 60%.",
-      "Migrated the main SPA from React to SvelteKit, cutting bundle size by 45% and improving LCP by 1.2 s.",
-      "Introduced end-to-end testing with Playwright, achieving 92% coverage on critical user flows.",
-      "Mentored 3 junior developers through code reviews and pair-programming sessions.",
+      "Designed and implemented subgraph indexing for on-chain license and node data, replacing slow RPC-only queries — cutting response times dramatically.",
+      "Built the web chat UI and the proxy backend that normalises requests between the UI and Hypercycle nodes, supporting LiteLLM and Ollama backends.",
+      "Part of the architecture team for Mosaic, a secure Electron-based desktop app for AI agents fully integrated with the Hypercycle ecosystem.",
+      "Developed the Hypercycle node owner dashboard UI and manages AWS deployments, CI/CD pipelines, and production infrastructure.",
     ],
     technologies: [
-      "SvelteKit",
-      "TypeScript",
-      "TailwindCSS",
-      "Playwright",
-      "Storybook",
-      "Figma",
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "Subgraphs",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "LiteLLM",
+      "Ollama",
+      "OpenAI API",
+      "Electron",
+      "Svelte",
     ],
   },
   {
-    company: "Startup Inc",
-    companyUrl: "https://example.com",
-    role: "Full Stack Developer",
-    type: "Full-time",
+    company: "Freelance Blockchain Engineer",
+    role: "Independent Contractor",
+    type: "Freelance",
     location: "Remote",
-    startDate: "Jun 2021",
-    endDate: "Feb 2023",
+    startDate: "Jan 2024",
+    endDate: "Oct 2024",
     summary:
-      "Built and maintained full-stack applications powering a B2B SaaS product from 0 → 10k users.",
+      "Worked on cutting-edge blockchain projects including experimental token standards, sustainability NFTs, and cross-chain payment systems.",
     achievements: [
-      "Designed and implemented a REST API serving 200+ endpoints with Node.js and Express.",
-      "Built a real-time dashboard using WebSockets, reducing data latency from 30 s to under 1 s.",
-      "Optimized PostgreSQL queries, improving p95 response times by 40%.",
-      "Collaborated with design to implement a fully responsive UI system following WCAG 2.1 AA.",
+      "ERC404: Worked on an experimental hybrid token standard combining ERC20 and ERC721 behaviour with on-chain randomness via oracles.",
+      "Seabrick: Built the smart contract and minting platform for a sustainability project converting ocean waste into construction bricks — each NFT represented a claimable physical brick.",
+      "Arbitrum Stylus: Developed a smart contract in Rust using Arbitrum Stylus, bridging Web3 payments with traditional bank payment rails.",
     ],
     technologies: [
-      "React",
+      "Solidity",
+      "Rust",
+      "Arbitrum Stylus",
+      "ERC404",
+      "ERC721",
+      "Hardhat",
+      "TypeScript",
       "Node.js",
-      "PostgreSQL",
-      "Redis",
+    ],
+  },
+  {
+    company: "Rainlang",
+    role: "Blockchain Developer",
+    type: "Full-time",
+    location: "Remote · London",
+    startDate: "Dec 2021",
+    endDate: "Dec 2023",
+    summary:
+      "Worked on Rainlang, a project making smart contract logic accessible to non-programmers through a human-readable on-chain interpreted language.",
+    achievements: [
+      "Built and maintained subgraphs for indexing Rain protocol data directly from the blockchain, enabling real-time querying across multiple contracts and networks.",
+      "Implemented a custom CBOR serialization library in AssemblyScript for subgraph use, minimising on-chain bytes and gas consumption.",
+      "Developed frontend for Rain Studio and Rain Explorer, allowing users to browse, deploy, and interact with Rain contracts across supported networks.",
+      "Identified and reported a bug in the Solidity compiler (solc) by reading EVM bytecode directly — traced a metadata/bytecode mismatch to a compiler-level inconsistency.",
+      "Established reproducible dev environments using Nix across all repositories, and integrated Docker-based local subgraph testing with CI/CD pipelines.",
+    ],
+    technologies: [
+      "Solidity",
+      "TypeScript",
+      "Svelte",
+      "GraphQL",
+      "AssemblyScript",
+      "Rust",
+      "Node.js",
+      "Nix",
       "Docker",
-      "AWS",
+      "Supabase",
+      "Hardhat",
+    ],
+  },
+  {
+    company: "Polkalokr",
+    role: "Blockchain Developer",
+    type: "Contract",
+    location: "Remote · London",
+    startDate: "Jul 2021",
+    endDate: "Nov 2021",
+    summary:
+      "Worked on a dynamic ERC20 token architecture where features are implemented as detachable extensions rather than baked in at deploy time.",
+    achievements: [
+      "Designed detachable extension system with isolated storage layouts, preventing collisions and allowing features to be attached/removed without redeploying.",
+      "Went deep into EVM internals — low-level storage slots, assembly, and contract bytecode — to make the extension system robust and gas-efficient.",
+      "Used Hardhat extensively for deployment scripting, testing, and tooling across the extension architecture.",
+    ],
+    technologies: [
+      "Solidity",
+      "Hardhat",
+      "TypeScript",
+      "Node.js",
+      "EVM Assembly",
+    ],
+  },
+  {
+    company: "Freelance Backend Developer",
+    role: "Independent",
+    type: "Freelance",
+    location: "Venezuela · Remote",
+    startDate: "Sep 2020",
+    endDate: "Jun 2021",
+    summary:
+      "First professional engineering work: built a management application for a tyre business, handling inventory, interactions, and reporting.",
+    achievements: [
+      "Designed and implemented backend services for inventory management and business reporting.",
+      "Focused on backend development — the start of a deliberate preference for server-side and systems work.",
+    ],
+    technologies: [
+      "Node.js",
+      "JavaScript",
+      "SQL",
     ],
   },
 ];
 
 export const education: Education[] = [
   {
-    school: "University of Technology",
-    schoolUrl: "https://example.com",
-    degree: "B.S. Computer Science",
-    field: "Software Engineering & Artificial Intelligence",
-    location: "Boston, MA",
-    startDate: "Sep 2017",
-    endDate: "Jun 2021",
+    school: "Universidad de Oriente",
+    degree: "B.Sc. Systems Engineering",
+    field: "Systems Engineering",
+    location: "Maturín, Monagas, Venezuela",
+    startDate: "2019",
+    endDate: "2025",
     description:
-      "Graduated with honors. Focused on Software Engineering and Artificial Intelligence.",
+      "Bachelor's degree in Systems Engineering with focus on software development and systems design.",
     achievements: [
-      "Dean's list 6 of 8 semesters.",
-      "Capstone: Built an AI-powered code review assistant using NLP techniques.",
+      "Relevant coursework: Formal Logic & Algorithms, Operating Systems, Information Systems, Database Systems Administration, Data Structures.",
     ],
+  },
+  {
+    school: "Pontificia Universidad Católica de Chile",
+    degree: "Certificate",
+    field: "Camino a la Excelencia en Gestión de Proyectos",
+    location: "Online",
+    startDate: "2023",
+    endDate: "2023",
+    description:
+      "Project management certification covering Lean Methodologies, Process Improvement, Value Engineering, Organizational Change, Contract Management, and Process Mapping.",
   },
 ];
 
-// TODO: Allow to render skill categories with icons or colors.
 export const skills: Skill[] = [
-  { name: "SvelteKit", category: "Frontend" },
+  // Languages
+  { name: "JavaScript", category: "Languages" },
+  { name: "TypeScript", category: "Languages" },
+  { name: "Python", category: "Languages" },
+  { name: "Rust", category: "Languages" },
+  { name: "Solidity", category: "Languages" },
+  { name: "Bash", category: "Languages" },
+  { name: "SQL", category: "Languages" },
+  { name: "Nix", category: "Languages" },
+
+  // Frontend
+  { name: "Svelte", category: "Frontend" },
   { name: "React", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "TailwindCSS", category: "Frontend" },
-  { name: "HTML / CSS", category: "Frontend" },
+
+  // Backend
   { name: "Node.js", category: "Backend" },
+  { name: "NestJS", category: "Backend" },
+  { name: "FastAPI", category: "Backend" },
+  { name: "GraphQL", category: "Backend" },
   { name: "PostgreSQL", category: "Backend" },
-  { name: "Redis", category: "Backend" },
-  { name: "REST / GraphQL", category: "Backend" },
-  { name: "Docker", category: "Tools" },
-  { name: "Git", category: "Tools" },
-  { name: "CI / CD", category: "Tools" },
-  { name: "Linux", category: "Tools" },
-  { name: "Figma", category: "Design" },
+  { name: "MongoDB", category: "Backend" },
+  { name: "SQLite", category: "Backend" },
+  { name: "Firebase", category: "Backend" },
+  { name: "Supabase", category: "Backend" },
+
+  // Blockchain
+  { name: "Hardhat", category: "Blockchain" },
+  { name: "Subgraphs (The Graph)", category: "Blockchain" },
+  { name: "EVM Internals", category: "Blockchain" },
+  { name: "Smart Contract Architecture", category: "Blockchain" },
+  { name: "Web3", category: "Blockchain" },
+  { name: "AssemblyScript", category: "Blockchain" },
+
+  // AI / ML
+  { name: "LLM Integration", category: "AI / ML" },
+  { name: "AI Agents", category: "AI / ML" },
+  { name: "Agentic Pipelines", category: "AI / ML" },
+  { name: "LiteLLM", category: "AI / ML" },
+  { name: "OpenAI API", category: "AI / ML" },
+  { name: "Ollama", category: "AI / ML" },
+
+  // Cloud / Infra
+  { name: "AWS", category: "Cloud / Infra" },
+  { name: "Docker", category: "Cloud / Infra" },
+  { name: "CI / CD", category: "Cloud / Infra" },
+  { name: "Git", category: "Cloud / Infra" },
+  { name: "Linux", category: "Cloud / Infra" },
+  { name: "Nix Environments", category: "Cloud / Infra" },
 ];
