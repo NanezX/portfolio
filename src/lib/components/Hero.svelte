@@ -8,6 +8,7 @@
   });
 </script>
 
+<!-- TODO: Improve this, something more personal -->
 <section class="min-h-[80vh] flex flex-col justify-center relative overflow-hidden pt-20">
   <!-- Glowing Background Orbs -->
   <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -21,13 +22,12 @@
       </h2>
       
       <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-heading leading-tight">
-        Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient bg-300pct">digital experiences</span><br />
-        that spark joy.
+        Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary animate-gradient bg-300pct">AI-powered systems</span><br />
+        & resilient backends.
       </h1>
       
       <p class="text-xl text-muted max-w-2xl leading-relaxed mx-auto md:mx-0">
-        I'm a full-stack developer specializing in building exceptional digital experiences. 
-        Currently focused on accessible, human-centered products.
+        I'm Víctor Hernández — a software engineer with 5+ years of experience, from deep blockchain internals to AI engineering, agentic architectures, and production infrastructure.
       </p>
 
       <div class="pt-8 flex flex-wrap gap-4 justify-center md:justify-start">
