@@ -8,7 +8,7 @@
   let { skills }: Props = $props();
 
   // Group skills by category for better display
-  const categories = ['Frontend', 'Backend', 'Tools', 'Design', 'Other'] as const;
+  const categories = ['Languages', 'Frontend', 'Backend', 'Blockchain', 'AI / ML', 'Cloud / Infra', 'Other'] as const;
 </script>
 
 <div class="space-y-4">
