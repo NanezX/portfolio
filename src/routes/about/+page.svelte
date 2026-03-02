@@ -6,22 +6,22 @@
 </script>
 
 <svelte:head>
-    <title>About & CV – Portfolio</title>
-    <meta name="description" content="My professional experience, education, and technical skills." />
+    <title>About & CV – Víctor Hernández</title>
+    <meta name="description" content="Víctor Hernández — Software Engineer. Professional experience, education, and technical skills." />
 </svelte:head>
 
 <div class="max-w-5xl mx-auto px-6 py-20">
     <!-- Page header -->
     <header class="mb-16">
         <h1 class="text-4xl md:text-5xl font-bold text-heading mb-4">About Me</h1>
-        <!-- TODO: Actually Write about me -->
         <p class="text-lg text-muted max-w-2xl leading-relaxed">
-            Hello! I'm a passionate developer who loves bridging the gap between design and engineering.
-            I believe that a website should not only look good but feel "alive" through smooth interactions and intuitive UX.
+            Software engineer with 5+ years of experience, built on a strong blockchain and smart contract foundation
+            and now fully focused on AI engineering — designing LLM-powered systems, agentic architectures, and
+            resilient backend infrastructure.
         </p>
         <p class="text-faint mt-3 max-w-2xl leading-relaxed">
-            My journey began when I inspected element on a webpage and realized I could change the headlines.
-            Since then, I've been hooked on the infinite possibilities of the web.
+            Comfortable going deep: from raw EVM bytecode and Solidity compiler internals to Python backends,
+            cloud deployments, and production AI pipelines. Driven by hard problems and clean solutions.
         </p>
     </header>
 
@@ -81,11 +81,11 @@
                 <ul class="space-y-3 list-none">
                     <li class="flex items-center gap-3 text-body text-sm">
                         <Coffee class="text-primary shrink-0" size={18} />
-                        <span>Coffee Enthusiast</span>
+                        <span>AI & LLM Systems</span>
                     </li>
                     <li class="flex items-center gap-3 text-body text-sm">
                         <Globe class="text-primary shrink-0" size={18} />
-                        <span>Travel</span>
+                        <span>Blockchain & Web3</span>
                     </li>
                     <li class="flex items-center gap-3 text-body text-sm">
                         <Heart class="text-primary shrink-0" size={18} />
@@ -98,11 +98,11 @@
             <div class="p-6 rounded-2xl bg-card border border-border">
                 <h3 class="text-lg font-semibold text-heading mb-4">Get in touch</h3>
                 <div class="space-y-3 text-sm text-muted">
-                    <a href="mailto:hello@example.com" class="flex items-center gap-2 hover:text-primary transition-colors">
-                        <Mail size={16} class="shrink-0" /> hello@example.com
+                    <a href="mailto:victor.nanezj@gmail.com" class="flex items-center gap-2 hover:text-primary transition-colors">
+                        <Mail size={16} class="shrink-0" /> victor.nanezj@gmail.com
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-primary transition-colors">
-                        <MapPin size={16} class="shrink-0" /> San Francisco, CA
+                    <a href="https://linkedin.com/in/nanezx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-primary transition-colors">
+                        <MapPin size={16} class="shrink-0" /> Monagas, Venezuela
                     </a>
                 </div>
             </div>
