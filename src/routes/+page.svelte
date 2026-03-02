@@ -4,22 +4,40 @@
 
     const projects = [
         {
-            title: "SvelteKit Blog",
-            description: "A high-performance blog platform built with SvelteKit and Markdown (MDSvex). Features include syntax highlighting, reading time estimates, and tag filtering.",
-            tags: ["SvelteKit", "Tailwind", "MDSvex"],
-            href: "/journal"
+            title: "Hypercycle AI Chat",
+            description: "Web chat UI and proxy backend that normalises requests between users and Hypercycle nodes, supporting LiteLLM and Ollama backends for decentralized AI inference.",
+            tags: ["Python", "FastAPI", "Svelte", "LiteLLM", "Docker"],
+            href: "https://hypercycle.ai"
         },
         {
-            title: "E-Commerce Dashboard",
-            description: "Real-time analytics dashboard for e-commerce store owners. Visualizes sales data, user sessions, and inventory levels using Recharts.",
-            tags: ["React", "Next.js", "D3.js"],
-            href: "#"
+            title: "Mosaic Desktop App",
+            description: "Secure Electron-based desktop application for AI agents, fully integrated with the Hypercycle ecosystem. Part of the architecture team.",
+            tags: ["Electron", "TypeScript", "AI Agents", "Svelte"],
+            href: "https://hypercycle.ai"
         },
         {
-            title: "Task Management App",
-            description: "A collaborative task manager with real-time updates via WebSockets. Supports drag-and-drop organization and team workspaces.",
-            tags: ["Vue", "Firebase", "Pinia"],
-            href: "#"
+            title: "Seabrick NFT Platform",
+            description: "Smart contract and minting platform for a sustainability project converting ocean waste into construction bricks. Each NFT represents a claimable physical brick.",
+            tags: ["Solidity", "Hardhat", "TypeScript", "ERC721"],
+            href: "https://github.com/NanezX"
+        },
+        {
+            title: "Rain Studio & Explorer",
+            description: "Frontend tools allowing users to browse, deploy, and interact with Rain-branded contracts across multiple networks, with on-chain interpreted language support.",
+            tags: ["Svelte", "TypeScript", "GraphQL", "Subgraphs"],
+            href: "https://github.com/NanezX"
+        },
+        {
+            title: "ERC404 Hybrid Token",
+            description: "Experimental hybrid token standard combining ERC20 and ERC721 behaviour with cross-standard compatibility and on-chain randomness via oracles.",
+            tags: ["Solidity", "ERC404", "Hardhat", "TypeScript"],
+            href: "https://github.com/NanezX"
+        },
+        {
+            title: "Arbitrum Stylus Contract",
+            description: "Smart contract written in Rust using Arbitrum Stylus, bridging Web3 payments with traditional bank payment rails.",
+            tags: ["Rust", "Arbitrum Stylus", "Web3"],
+            href: "https://github.com/NanezX"
         }
     ];
 </script>
@@ -32,7 +50,7 @@
             <h2 class="text-3xl font-bold text-heading mb-2">Featured Work</h2>
             <p class="text-muted">A selection of my recent projects.</p>
         </div>
-        <a href="https://github.com" target="_blank" class="text-primary hover:text-heading transition-colors flex items-center gap-2 group">
+        <a href="https://github.com/NanezX" target="_blank" class="text-primary hover:text-heading transition-colors flex items-center gap-2 group">
             View all on GitHub 
             <span class="group-hover:translate-x-1 transition-transform">→</span>
         </a>
