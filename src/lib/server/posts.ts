@@ -1,4 +1,5 @@
 import { parse } from "path";
+import { formatDate } from "$lib/utils/date";
 
 export interface Post {
   slug: string;
@@ -8,17 +9,6 @@ export interface Post {
   excerpt: string;
   tags: string[];
   readingTime: string;
-}
-
-/**
- * Format ISO date string to human-readable format (e.g., "Oct 15, 2025")
- */
-function formatDate(isoDate: string): string {
-  const date = new Date(isoDate);
-  const month = date.toLocaleString('en-US', { month: 'short' });
-  const day = date.getDate();
-  const year = date.getFullYear();
-  return `${month} ${day}, ${year}`;
 }
 
 /**
