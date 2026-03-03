@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logoIcon from '$lib/assets/logo.png';
+	import logoIcon from '$lib/assets/logo-icon.png';
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
@@ -26,7 +26,7 @@
 		<a href={resolve('/')} class="group flex items-center gap-2">
 			<img
 				src={logoIcon}
-				alt="Logo"
+				alt="NanezX Logo"
 				class="border-border bg-card hover:border-primary/50 h-12 w-auto rounded-xl border p-1.5 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
 			/>
 		</a>
