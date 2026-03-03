@@ -18,7 +18,7 @@
 	}[]>([]);
 
 	onMount(() => {
-		floatingItems = Array.from({ length: 20 }, (_, i) => ({
+		floatingItems = Array.from({ length: 5 }, (_, i) => ({
 			id: i,
 			component: icons[Math.floor(Math.random() * icons.length)],
 			x: Math.random() * 100,
@@ -32,10 +32,6 @@
 </script>
 
 <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-	<!-- Ambient Glowing Orbs -->
-	<div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow opacity-20"></div>
-	<div class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-secondary/10 rounded-full blur-[100px] animate-pulse-slow delay-1000 opacity-15"></div>
-
 	<!-- Floating Icons -->
 	{#each floatingItems as item (item.id)}
 		<div
@@ -78,19 +74,10 @@
 
     @keyframes breathe {
         0%, 100% {
-            opacity: 0.1; /* Increased from 0.03 */
+            opacity: 0.1;
         }
         50% {
-            opacity: 0.3; /* Increased from 0.08 */
+            opacity: 0.3;
         }
-    }
-    
-    .animate-pulse-slow {
-        animation: pulse-slow 15s ease-in-out infinite; /* Slower */
-    }
-
-    @keyframes pulse-slow {
-        0%, 100% { transform: scale(1); opacity: 0.2; }
-        50% { transform: scale(1.1); opacity: 0.3; }
     }
 </style>
