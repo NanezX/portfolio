@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+.svelte-kit/
+build/
+dist/
+out/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Cache
+.vite/
+.turbo/
+.next/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Lock files (though we use pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# Generated files
+*.d.ts.map
+*.js.map
+*.css.map
+
+# Static assets (optional, depends on preferences)
+static/*.svg
+static/*.png
+static/*.jpg
+static/*.jpeg
+static/*.gif
+static/*.webp
+static/*.ico
