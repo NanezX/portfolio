@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { Clock, Tag } from 'lucide-svelte';
+	import { Clock } from 'lucide-svelte';
 
 	let { data } = $props();
 </script>

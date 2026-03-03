@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { experiences, education, skills, formatDuration } from '$lib/data/resume';
+	import { experiences, education, skills } from '$lib/data/resume';
 </script>
 
 <svelte:head>
@@ -110,7 +110,7 @@
 	<section class="py-12 md:py-20">
 		<h2 class="text-heading mb-8 text-3xl font-bold md:mb-12 md:text-4xl">Experience</h2>
 		<div class="space-y-12 md:space-y-16">
-			{#each experiences as job, i}
+			{#each experiences as job}
 				<div class="border-border/50 border-b py-10 last:border-0">
 					<div class="mb-3 flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
 						<div>
