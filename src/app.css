@@ -13,9 +13,9 @@
   --t-card: #ffffff;
   --t-heading: #0f172a;
   --t-sub: #1e293b;
-  --t-body: #334155;
-  --t-muted: #64748b;
-  --t-faint: #94a3b8;
+  --t-body: #1a1a1a;
+  --t-muted: #475569;
+  --t-faint: #64748b;
   --t-border: #e2e8f0;
   --t-border-hover: #cbd5e1;
   --t-icon: #334155;
@@ -27,7 +27,7 @@
   --t-card: #131315;
   --t-heading: #ffffff;
   --t-sub: #e5e7eb;
-  --t-body: #d1d5db;
+  --t-body: #E8E8E8;
   --t-muted: #9ca3af;
   --t-faint: #6b7280;
   --t-border: #1e1e1e;
@@ -60,15 +60,13 @@
 /* ─── Base styles ─────────────────────────────────────────────────────── */
 
 @layer base {
+  html {
+    font-size: 112.5%;
+  }
+
   body {
     @apply bg-bg text-body font-sans antialiased;
-    background-image: radial-gradient(
-      circle at 50% 50%,
-      var(--color-surface) 1px,
-      transparent 1px
-    );
-    background-size: 24px 24px;
-    background-attachment: fixed;
+    line-height: 1.7;
     min-height: 100vh;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
