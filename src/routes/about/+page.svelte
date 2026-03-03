@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { experiences, education, skills } from '$lib/data/resume';
+	import { experiences, education } from '$lib/data/resume';
+	import { badgeCategories } from '$lib/data/badges';
 </script>
 
 <svelte:head>
@@ -33,76 +34,24 @@
 		</p>
 	</section>
 
-	<!-- TODO: Possible improvement - Generate arrays before rendering here -->
 	<!-- Technical Capabilities Grid -->
 	<section class="py-12 md:py-20">
 		<h2 class="text-heading mb-8 text-3xl font-bold md:mb-12 md:text-4xl">
 			Technical Capabilities
 		</h2>
 		<div class="grid gap-8 md:grid-cols-2 md:gap-12">
-			<!-- AI / ML -->
-			<div>
-				<h3 class="text-muted mb-4 text-sm font-semibold tracking-widest uppercase">
-					AI / ML & LLMs
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{#each skills.filter((s) => s.category === 'AI / ML') as skill (skill.id)}
-						<span
-							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
-						>
-							{skill.name}
-						</span>
-					{/each}
+			{#each badgeCategories as category (category.name)}
+				<div>
+					<h3 class="text-muted mb-4 text-sm font-semibold tracking-widest uppercase">
+						{category.name}
+					</h3>
+					<div class="flex flex-wrap gap-2">
+						{#each category.skills as skill, index (index)}
+							<img src={skill.url} alt={skill.label} title={skill.label} height="28" />
+						{/each}
+					</div>
 				</div>
-			</div>
-
-			<!-- Backend & Infrastructure -->
-			<div>
-				<h3 class="text-muted mb-4 text-sm font-semibold tracking-widest uppercase">
-					Backend & Infrastructure
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{#each [...skills.filter((s) => s.category === 'Backend'), ...skills.filter((s) => s.category === 'Cloud / Infra')] as skill, index (`${skill.category}-${index}`)}
-						<span
-							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
-						>
-							{skill.name}
-						</span>
-					{/each}
-				</div>
-			</div>
-
-			<!-- Blockchain & Web3 -->
-			<div>
-				<h3 class="text-muted mb-4 text-sm font-semibold tracking-widest uppercase">
-					Blockchain & Web3
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{#each skills.filter((s) => s.category === 'Blockchain') as skill (skill.id)}
-						<span
-							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
-						>
-							{skill.name}
-						</span>
-					{/each}
-				</div>
-			</div>
-
-			<!-- Languages & Frameworks -->
-			<div>
-				<h3 class="text-muted mb-4 text-sm font-semibold tracking-widest uppercase">
-					Languages & Frameworks
-				</h3>
-				<div class="flex flex-wrap gap-2">
-					{#each [...skills.filter((s) => s.category === 'Languages'), ...skills.filter((s) => s.category === 'Frontend')] as skill, index (`${skill.category}-${index}`)}
-						<span
-							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
-						>
-							{skill.name}
-						</span>
-					{/each}
-				</div>
-			</div>
+			{/each}
 		</div>
 	</section>
 
@@ -151,7 +100,7 @@
 						<div class="flex flex-wrap gap-1.5">
 							{#each job.technologies as tech, index (index)}
 								<span
-									class="text-muted border-border/40 rounded-full border px-2.5 py-0.5 text-xs font-medium"
+									class="text-xs font-medium px-3 py-1.5 rounded-full bg-card text-heading border border-[#374151] dark:border-zinc-600"
 								>
 									{tech}
 								</span>
