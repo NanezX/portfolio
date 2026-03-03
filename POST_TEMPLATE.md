@@ -28,16 +28,16 @@ tags:
 
 ## Frontmatter fields
 
-| Field     | Required | Description                                      |
-| --------- | -------- | ------------------------------------------------ |
-| `title`   | ✅       | Post title (shown in listing and page header)    |
-| `date`    | ✅       | ISO date string `YYYY-MM-DD`                     |
-| `excerpt` | ✅       | Short summary (1-2 sentences)                    |
-| `tags`    | ✅       | Array of tag strings for categorization          |
+| Field     | Required | Description                                   |
+| --------- | -------- | --------------------------------------------- |
+| `title`   | ✅       | Post title (shown in listing and page header) |
+| `date`    | ✅       | ISO date string `YYYY-MM-DD`                  |
+| `excerpt` | ✅       | Short summary (1-2 sentences)                 |
+| `tags`    | ✅       | Array of tag strings for categorization       |
 
 ## Example post
 
-```svx
+````svx
 ---
 title: Getting Started with SvelteKit
 date: '2026-02-26'
@@ -69,7 +69,7 @@ You can import and use Svelte components directly:
 
 <Counter />
 \```
-```
+````
 
 ## Tips
 

@@ -18,6 +18,7 @@ A modern, responsive portfolio website built with SvelteKit! 🚀
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v18 or higher recommended)
 - npm or your preferred package manager
 
@@ -48,18 +49,22 @@ npm run preview
 All the main content is in `src/routes/+page.svelte`. Here's what you need to update:
 
 ### 1. Personal Information
+
 - **Line 9:** Replace `"Your Name"` with your actual name
 - **Line 10:** Update your job title/tagline
 - **Line 11-13:** Customize your hero description
 
 ### 2. About Me Section
+
 - **Lines 22-30:** Write your personal bio and introduction
 
 ### 3. Skills
+
 - **Lines 39-63:** Update the skills lists for Frontend, Backend, and Tools
 - Add or remove skill cards as needed
 
 ### 4. Projects
+
 - **Lines 74-120:** Update each project card with:
   - Project title and description
   - Technology tags
@@ -67,6 +72,7 @@ All the main content is in `src/routes/+page.svelte`. Here's what you need to up
   - Add more projects by copying the `<article class="project-card">` structure
 
 ### 5. Contact Information
+
 - **Lines 132-145:** Update contact links:
   - Email address
   - GitHub username
@@ -74,10 +80,13 @@ All the main content is in `src/routes/+page.svelte`. Here's what you need to up
   - Twitter/X username
 
 ### 6. Footer
+
 - **Line 153:** Update the copyright with your name
 
 ### 7. Styling (Optional)
+
 Want to change colors or styles? Check the `<style>` section at the bottom of `+page.svelte`:
+
 - **Hero gradient:** Lines 193-194 (currently purple gradient)
 - **Accent color:** Line 198 (currently #ffd700 gold)
 - **Button colors:** Lines 234-250
@@ -105,22 +114,27 @@ portfolio/
 This portfolio can be deployed to various platforms:
 
 ### Vercel (Recommended)
+
 ```bash
 npm install -g vercel
 vercel
 ```
 
 ### Netlify
+
 ```bash
 npm run build
 # Upload the .svelte-kit/output directory
 ```
 
 ### GitHub Pages
+
 Install the static adapter:
+
 ```bash
 npm install -D @sveltejs/adapter-static
 ```
+
 Then update `svelte.config.js` to use adapter-static.
 
 ## 🛠️ Tech Stack
@@ -141,6 +155,7 @@ Feel free to fork this project and customize it for your needs! If you have sugg
 ## 💬 Support
 
 If you have questions or run into issues:
+
 - Check the [SvelteKit documentation](https://svelte.dev/docs/kit)
 - Open an issue in this repository
 
