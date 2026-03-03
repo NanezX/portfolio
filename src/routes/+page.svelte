@@ -4,9 +4,10 @@
 
 	const projects = [
 		{
+			id: 'mosaic',
 			title: 'Mosaic Desktop App',
 			description:
-				'Secure Electron-based desktop application for AI agents, fully integrated with the Hypercycle ecosystem. Part of the architecture team.',
+				'Secure Electron-based desktop application for AI agents, fully integrated with Hypercycle ecosystem. Part of the architecture team.',
 			tags: ['Electron', 'TypeScript', 'AI Agents', 'Svelte'],
 			badge: {
 				text: 'In Progress'
@@ -17,6 +18,7 @@
 			}
 		},
 		{
+			id: 'hypy',
 			title: 'HyperY Web Chat',
 			description:
 				'Web chat UI and proxy backend that normalises requests between users and Hypercycle nodes, supporting LiteLLM and Ollama backends for decentralized AI inference.',
@@ -27,24 +29,28 @@
 			}
 		},
 		{
+			id: 'seabrick',
 			title: 'Seabrick NFT Platform',
 			description:
 				'Smart contract and minting platform for a sustainability project converting ocean waste into construction bricks. Each NFT represents a claimable physical brick.',
 			tags: ['Solidity', 'Hardhat', 'TypeScript', 'ERC721']
 		},
 		{
+			id: 'rain-studio',
 			title: 'Rain Studio & Explorer',
 			description:
 				'Frontend tools allowing users to browse, deploy, and interact with Rain-branded contracts across multiple networks, with on-chain interpreted language support.',
 			tags: ['Svelte', 'TypeScript', 'GraphQL', 'Subgraphs']
 		},
 		{
+			id: 'erc404',
 			title: 'ERC404 Hybrid Token',
 			description:
 				'Experimental hybrid token standard combining ERC20 and ERC721 behaviour with cross-standard compatibility and on-chain randomness via oracles.',
 			tags: ['Solidity', 'ERC404', 'Hardhat', 'TypeScript']
 		},
 		{
+			id: 'arbitrum',
 			title: 'Arbitrum Stylus Contract',
 			description:
 				'Smart contract written in Rust using Arbitrum Stylus, bridging Web3 payments with traditional bank payment rails.',
@@ -69,6 +75,7 @@
 		<a
 			href="https://github.com/NanezX"
 			target="_blank"
+			rel="noopener noreferrer"
 			class="text-primary hover:text-heading group flex items-center gap-2 transition-colors"
 		>
 			View all on GitHub
@@ -77,7 +84,7 @@
 	</div>
 
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-		{#each projects as project}
+		{#each projects as project (project.id)}
 			<ProjectCard {...project} />
 		{/each}
 	</div>

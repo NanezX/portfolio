@@ -23,7 +23,7 @@
 		<p class="text-faint py-20 text-center">No posts yet. Stay tuned!</p>
 	{:else}
 		<div class="max-w-2xl space-y-6">
-			{#each data.posts as post}
+			{#each data.posts as post (post.slug)}
 				<a href={resolve(`/journal/${post.slug}`)} class="group block">
 					<article
 						class="bg-card border-border hover:border-primary/30 rounded-2xl border p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]"
@@ -52,7 +52,7 @@
 							<!-- Tags -->
 							{#if post.tags?.length}
 								<div class="flex flex-wrap gap-1.5">
-									{#each post.tags as tag}
+									{#each post.tags as tag (tag)}
 										<span
 											class="bg-primary/10 text-primary/80 border-primary/10 rounded-full border px-2.5 py-0.5 text-xs font-medium"
 										>

@@ -11,7 +11,7 @@
 
 <article class="mx-auto max-w-2xl px-6 py-20 md:px-12 lg:px-16">
 	<a
-		href={resolve("/journal")}
+		href={resolve('/journal')}
 		class="text-muted hover:text-primary mb-8 inline-flex items-center text-sm transition-colors"
 	>
 		← Back to Journal
@@ -22,7 +22,7 @@
 			<time>{data.formattedDate}</time>
 			<span>•</span>
 			<div class="flex gap-2">
-				{#each data.meta.tags as tag}
+				{#each data.meta.tags as tag (tag)}
 					<span class="text-primary">{tag}</span>
 				{/each}
 			</div>

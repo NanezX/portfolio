@@ -33,7 +33,7 @@
 		</p>
 	</section>
 
-	<!-- TODO: Possible improvement - Generate the array before rendering here -->
+	<!-- TODO: Possible improvement - Generate arrays before rendering here -->
 	<!-- Technical Capabilities Grid -->
 	<section class="py-12 md:py-20">
 		<h2 class="text-heading mb-8 text-3xl font-bold md:mb-12 md:text-4xl">
@@ -46,7 +46,7 @@
 					AI / ML & LLMs
 				</h3>
 				<div class="flex flex-wrap gap-2">
-					{#each skills.filter((s) => s.category === 'AI / ML') as skill}
+					{#each skills.filter((s) => s.category === 'AI / ML') as skill (skill.id)}
 						<span
 							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
 						>
@@ -62,7 +62,7 @@
 					Backend & Infrastructure
 				</h3>
 				<div class="flex flex-wrap gap-2">
-					{#each [...skills.filter((s) => s.category === 'Backend'), ...skills.filter((s) => s.category === 'Cloud / Infra')] as skill}
+					{#each [...skills.filter((s) => s.category === 'Backend'), ...skills.filter((s) => s.category === 'Cloud / Infra')] as skill, index (`${skill.category}-${index}`)}
 						<span
 							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
 						>
@@ -78,7 +78,7 @@
 					Blockchain & Web3
 				</h3>
 				<div class="flex flex-wrap gap-2">
-					{#each skills.filter((s) => s.category === 'Blockchain') as skill}
+					{#each skills.filter((s) => s.category === 'Blockchain') as skill (skill.id)}
 						<span
 							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
 						>
@@ -94,7 +94,7 @@
 					Languages & Frameworks
 				</h3>
 				<div class="flex flex-wrap gap-2">
-					{#each [...skills.filter((s) => s.category === 'Languages'), ...skills.filter((s) => s.category === 'Frontend')] as skill}
+					{#each [...skills.filter((s) => s.category === 'Languages'), ...skills.filter((s) => s.category === 'Frontend')] as skill, index (`${skill.category}-${index}`)}
 						<span
 							class="rounded-full bg-gray-100 px-3 py-1.5 text-sm text-gray-700 dark:bg-zinc-800 dark:text-gray-300"
 						>
@@ -110,7 +110,7 @@
 	<section class="py-12 md:py-20">
 		<h2 class="text-heading mb-8 text-3xl font-bold md:mb-12 md:text-4xl">Experience</h2>
 		<div class="space-y-12 md:space-y-16">
-			{#each experiences as job}
+			{#each experiences as job (job.id)}
 				<div class="border-border/50 border-b py-10 last:border-0">
 					<div class="mb-3 flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
 						<div>
@@ -138,7 +138,7 @@
 
 					{#if job.achievements.length > 0}
 						<ul class="mb-4 space-y-2">
-							{#each job.achievements as point}
+							{#each job.achievements as point, index (index)}
 								<li class="text-body flex items-start gap-2 text-sm leading-relaxed">
 									<span class="bg-primary mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"></span>
 									{point}
@@ -149,7 +149,7 @@
 
 					{#if job.technologies.length > 0}
 						<div class="flex flex-wrap gap-1.5">
-							{#each job.technologies as tech}
+							{#each job.technologies as tech, index (index)}
 								<span
 									class="text-muted border-border/40 rounded-full border px-2.5 py-0.5 text-xs font-medium"
 								>
@@ -167,7 +167,7 @@
 	<section class="py-12 md:py-20">
 		<h2 class="text-heading mb-8 text-3xl font-bold md:mb-12 md:text-4xl">Education</h2>
 		<div class="space-y-12 md:space-y-16">
-			{#each education as edu}
+			{#each education as edu (edu.id)}
 				<div class="border-border/50 border-b py-10 last:border-0">
 					<div class="mb-3 flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
 						<div>
@@ -198,7 +198,7 @@
 
 					{#if edu.achievements && edu.achievements.length > 0}
 						<ul class="space-y-2">
-							{#each edu.achievements as point}
+							{#each edu.achievements as point, index (index)}
 								<li class="text-body flex items-start gap-2 text-sm leading-relaxed">
 									<span class="bg-primary mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"></span>
 									{point}

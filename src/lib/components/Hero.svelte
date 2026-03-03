@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	let visible = $state(false);
 
@@ -52,7 +52,7 @@ import { onMount } from 'svelte';
 					See My Work ↓
 				</a>
 				<a
-					href={resolve("/about")}
+					href={resolve('/about')}
 					class="bg-card text-heading hover:bg-border border-border hover:border-border-hover rounded-full border px-8 py-4 font-semibold transition-all"
 				>
 					About Me

@@ -98,7 +98,7 @@
 		<!-- Achievements -->
 		{#if achievements.length > 0}
 			<ul class="mt-4 space-y-2">
-				{#each achievements as point}
+				{#each achievements as point, index (index)}
 					<li class="text-body flex items-start gap-2 text-sm leading-relaxed">
 						<span class="bg-primary/60 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"></span>
 						{point}
@@ -110,7 +110,7 @@
 		<!-- Technologies -->
 		{#if technologies.length > 0}
 			<div class="mt-4 flex flex-wrap gap-1.5">
-				{#each technologies as tech}
+				{#each technologies as tech, index (index)}
 					<span
 						class="bg-card text-muted border-border group-hover:border-primary/15 group-hover:text-body rounded-full border px-2.5 py-0.5 text-xs font-medium transition-colors"
 					>

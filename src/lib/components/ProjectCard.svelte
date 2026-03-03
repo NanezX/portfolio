@@ -55,8 +55,8 @@
 			</p>
 		</div>
 
-		<div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-2">
-			{#each tags as tag}
+		<div class="relative z-10 mt-auto flex-wrap gap-2 pt-2">
+			{#each tags as tag (tag)}
 				<span
 					class="bg-card text-body border-border group-hover:border-primary/20 group-hover:text-primary/90 rounded-full border px-3 py-1 text-xs font-medium transition-colors"
 				>
@@ -106,8 +106,8 @@
 			</p>
 		</div>
 
-		<div class="relative z-10 mt-auto flex flex-wrap gap-2 pt-2">
-			{#each tags as tag}
+		<div class="relative z-10 mt-auto flex-wrap gap-2 pt-2">
+			{#each tags as tag (tag)}
 				<span
 					class="bg-card text-body border-border group-hover:border-primary/20 group-hover:text-primary/90 rounded-full border px-3 py-1 text-xs font-medium transition-colors"
 				>

@@ -11,12 +11,7 @@ export const load: PageLoad = async ({ params }) => {
 			meta: post.metadata,
 			formattedDate: formatDate(post.metadata.date || '')
 		};
-	} catch (e: unknown) {
-		if (e instanceof Error) {
-			console.error(`Error loading post ${params.slug}:`, e.message);
-		} else {
-			console.error(`Unknown error loading post ${params.slug}:`, e);
-		}
+	} catch {
 		error(404, `Could not find ${params.slug}`);
 	}
 };

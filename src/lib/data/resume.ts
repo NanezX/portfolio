@@ -1,22 +1,24 @@
-// ─── Types ──────────────────────────────────────────────────────────────────
+// ─── Types ──────────────────────────────────────────────────────────
 //
 // To add a new experience entry, just push an object into the `experiences`
 // array below. Each field is documented in the interface.
 //
 // Dates use "MMM YYYY" format (e.g. "Jan 2023"). Use "Present" for endDate
 // if you're still working there.
-// ────────────────────────────────────────────────────────────────────────────
+// ────────────────────────────────────────────────────────────────────
 
 export type EmploymentType = 'Full-time' | 'Part-time' | 'Contract' | 'Freelance' | 'Internship';
 
 export interface Experience {
+	/** Unique identifier for the experience */
+	id?: string;
 	/** Company or organization name */
 	company: string;
-	/** Optional URL to the company website */
+	/** Optional URL to company website */
 	companyUrl?: string;
 	/** Your job title */
 	role: string;
-	/** Employment type badge shown next to the role */
+	/** Employment type badge shown next to role */
 	type: EmploymentType;
 	/** City, country, or "Remote" */
 	location: string;
@@ -33,6 +35,7 @@ export interface Experience {
 }
 
 export interface Education {
+	id?: string;
 	school: string;
 	schoolUrl?: string;
 	degree: string;
@@ -45,6 +48,7 @@ export interface Education {
 }
 
 export interface Skill {
+	id?: string;
 	name: string;
 	category:
 		| 'Languages'
@@ -56,7 +60,7 @@ export interface Skill {
 		| 'Other';
 }
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
+// ─── Helpers ────────────────────────────────────────────────────────
 
 /**
  * Compute a human-readable duration string from two date strings.
@@ -81,7 +85,7 @@ export function formatDuration(start: string, end: string): string {
 	return `${rem} mo`;
 }
 
-// ─── Data ───────────────────────────────────────────────────────────────────
+// ─── Data ───────────────────────────────────────────────────────────
 //
 //   ➜  ADD NEW EXPERIENCE HERE
 //      Copy one block and fill in your details. The array is rendered
@@ -90,6 +94,7 @@ export function formatDuration(start: string, end: string): string {
 
 export const experiences: Experience[] = [
 	{
+		id: 'hypercycle',
 		company: 'Hypercycle',
 		companyUrl: 'https://hypercycle.ai',
 		role: 'Software Engineer',
@@ -101,7 +106,7 @@ export const experiences: Experience[] = [
 			'Joined as Python backend developer and grew into a cross-functional role covering infrastructure, AI, and product engineering.',
 		achievements: [
 			'Designed and implemented subgraph indexing for on-chain license and node data, replacing slow RPC-only queries — cutting response times dramatically.',
-			'Built the web chat UI and the proxy backend that normalises requests between the UI and Hypercycle nodes, supporting LiteLLM and Ollama backends.',
+			'Built a web chat UI and proxy backend that normalises requests between UI and Hypercycle nodes, supporting LiteLLM and Ollama backends.',
 			'Part of the architecture team for Mosaic, a secure Electron-based desktop app for AI agents fully integrated with the Hypercycle ecosystem.',
 			'Developed the Hypercycle node owner dashboard UI and manages AWS deployments, CI/CD pipelines, and production infrastructure.'
 		],
@@ -121,6 +126,7 @@ export const experiences: Experience[] = [
 		]
 	},
 	{
+		id: 'freelance-blockchain',
 		company: 'Freelance Blockchain Engineer',
 		role: 'Independent Contractor',
 		type: 'Freelance',
@@ -131,7 +137,7 @@ export const experiences: Experience[] = [
 			'Worked on cutting-edge blockchain projects including experimental token standards, sustainability NFTs, and cross-chain payment systems.',
 		achievements: [
 			'ERC404: Worked on an experimental hybrid token standard combining ERC20 and ERC721 behaviour with on-chain randomness via oracles.',
-			'Seabrick: Built the smart contract and minting platform for a sustainability project converting ocean waste into construction bricks — each NFT represented a claimable physical brick.',
+			'Seabrick: Built a smart contract and minting platform for a sustainability project converting ocean waste into construction bricks — each NFT represents a claimable physical brick.',
 			'Arbitrum Stylus: Developed a smart contract in Rust using Arbitrum Stylus, bridging Web3 payments with traditional bank payment rails.'
 		],
 		technologies: [
@@ -146,6 +152,7 @@ export const experiences: Experience[] = [
 		]
 	},
 	{
+		id: 'rainlang',
 		company: 'Rainlang',
 		role: 'Blockchain Developer',
 		type: 'Full-time',
@@ -176,6 +183,7 @@ export const experiences: Experience[] = [
 		]
 	},
 	{
+		id: 'polkalokr',
 		company: 'Polkalokr',
 		role: 'Blockchain Developer',
 		type: 'Contract',
@@ -192,6 +200,7 @@ export const experiences: Experience[] = [
 		technologies: ['Solidity', 'Hardhat', 'TypeScript', 'Node.js', 'EVM Assembly']
 	},
 	{
+		id: 'freelance-backend',
 		company: 'Freelance Backend Developer',
 		role: 'Independent',
 		type: 'Freelance',
@@ -210,6 +219,7 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
 	{
+		id: 'udo',
 		school: 'Universidad de Oriente',
 		degree: 'B.Sc. Systems Engineering',
 		field: 'Systems Engineering',
@@ -223,6 +233,7 @@ export const education: Education[] = [
 		]
 	},
 	{
+		id: 'puc',
 		school: 'Pontificia Universidad Católica de Chile',
 		degree: 'Certificate',
 		field: 'Camino a la Excelencia en Gestión de Proyectos',
@@ -236,51 +247,51 @@ export const education: Education[] = [
 
 export const skills: Skill[] = [
 	// Languages
-	{ name: 'JavaScript', category: 'Languages' },
-	{ name: 'TypeScript', category: 'Languages' },
-	{ name: 'Python', category: 'Languages' },
-	{ name: 'Rust', category: 'Languages' },
-	{ name: 'Solidity', category: 'Languages' },
-	{ name: 'Bash', category: 'Languages' },
-	{ name: 'SQL', category: 'Languages' },
-	{ name: 'Nix', category: 'Languages' },
+	{ id: 'js', name: 'JavaScript', category: 'Languages' },
+	{ id: 'ts', name: 'TypeScript', category: 'Languages' },
+	{ id: 'py', name: 'Python', category: 'Languages' },
+	{ id: 'rust', name: 'Rust', category: 'Languages' },
+	{ id: 'sol', name: 'Solidity', category: 'Languages' },
+	{ id: 'bash', name: 'Bash', category: 'Languages' },
+	{ id: 'sql', name: 'SQL', category: 'Languages' },
+	{ id: 'nix', name: 'Nix', category: 'Languages' },
 
 	// Frontend
-	{ name: 'Svelte', category: 'Frontend' },
-	{ name: 'React', category: 'Frontend' },
+	{ id: 'svelte', name: 'Svelte', category: 'Frontend' },
+	{ id: 'react', name: 'React', category: 'Frontend' },
 
 	// Backend
-	{ name: 'Node.js', category: 'Backend' },
-	{ name: 'NestJS', category: 'Backend' },
-	{ name: 'FastAPI', category: 'Backend' },
-	{ name: 'GraphQL', category: 'Backend' },
-	{ name: 'PostgreSQL', category: 'Backend' },
-	{ name: 'MongoDB', category: 'Backend' },
-	{ name: 'SQLite', category: 'Backend' },
-	{ name: 'Firebase', category: 'Backend' },
-	{ name: 'Supabase', category: 'Backend' },
+	{ id: 'node', name: 'Node.js', category: 'Backend' },
+	{ id: 'nest', name: 'NestJS', category: 'Backend' },
+	{ id: 'fastapi', name: 'FastAPI', category: 'Backend' },
+	{ id: 'graphql', name: 'GraphQL', category: 'Backend' },
+	{ id: 'postgres', name: 'PostgreSQL', category: 'Backend' },
+	{ id: 'mongo', name: 'MongoDB', category: 'Backend' },
+	{ id: 'sqlite', name: 'SQLite', category: 'Backend' },
+	{ id: 'firebase', name: 'Firebase', category: 'Backend' },
+	{ id: 'supabase', name: 'Supabase', category: 'Backend' },
 
 	// Blockchain
-	{ name: 'Hardhat', category: 'Blockchain' },
-	{ name: 'Subgraphs (The Graph)', category: 'Blockchain' },
-	{ name: 'EVM Internals', category: 'Blockchain' },
-	{ name: 'Smart Contract Architecture', category: 'Blockchain' },
-	{ name: 'Web3', category: 'Blockchain' },
-	{ name: 'AssemblyScript', category: 'Blockchain' },
+	{ id: 'hardhat', name: 'Hardhat', category: 'Blockchain' },
+	{ id: 'subgraphs', name: 'Subgraphs (The Graph)', category: 'Blockchain' },
+	{ id: 'evm', name: 'EVM Internals', category: 'Blockchain' },
+	{ id: 'contracts', name: 'Smart Contract Architecture', category: 'Blockchain' },
+	{ id: 'web3', name: 'Web3', category: 'Blockchain' },
+	{ id: 'asm', name: 'AssemblyScript', category: 'Blockchain' },
 
 	// AI / ML
-	{ name: 'LLM Integration', category: 'AI / ML' },
-	{ name: 'AI Agents', category: 'AI / ML' },
-	{ name: 'Agentic Pipelines', category: 'AI / ML' },
-	{ name: 'LiteLLM', category: 'AI / ML' },
-	{ name: 'OpenAI API', category: 'AI / ML' },
-	{ name: 'Ollama', category: 'AI / ML' },
+	{ id: 'llm', name: 'LLM Integration', category: 'AI / ML' },
+	{ id: 'agents', name: 'AI Agents', category: 'AI / ML' },
+	{ id: 'pipelines', name: 'Agentic Pipelines', category: 'AI / ML' },
+	{ id: 'litellm', name: 'LiteLLM', category: 'AI / ML' },
+	{ id: 'openai', name: 'OpenAI API', category: 'AI / ML' },
+	{ id: 'ollama', name: 'Ollama', category: 'AI / ML' },
 
 	// Cloud / Infra
-	{ name: 'AWS', category: 'Cloud / Infra' },
-	{ name: 'Docker', category: 'Cloud / Infra' },
-	{ name: 'CI / CD', category: 'Cloud / Infra' },
-	{ name: 'Git', category: 'Cloud / Infra' },
-	{ name: 'Linux', category: 'Cloud / Infra' },
-	{ name: 'Nix Environments', category: 'Cloud / Infra' }
+	{ id: 'aws', name: 'AWS', category: 'Cloud / Infra' },
+	{ id: 'docker', name: 'Docker', category: 'Cloud / Infra' },
+	{ id: 'cicd', name: 'CI / CD', category: 'Cloud / Infra' },
+	{ id: 'git', name: 'Git', category: 'Cloud / Infra' },
+	{ id: 'linux', name: 'Linux', category: 'Cloud / Infra' },
+	{ id: 'nix-env', name: 'Nix Environments', category: 'Cloud / Infra' }
 ];

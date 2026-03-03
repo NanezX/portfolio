@@ -23,7 +23,7 @@
 >
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 		<!-- Logo -->
-		<a href={resolve("/")} class="group flex items-center gap-2">
+		<a href={resolve('/')} class="group flex items-center gap-2">
 			<img
 				src={logoIcon}
 				alt="Logo"

@@ -11,6 +11,13 @@ export interface Post {
 	readingTime: string;
 }
 
+export interface PostMetadata {
+	title?: string;
+	date?: string;
+	excerpt?: string;
+	tags?: string[];
+}
+
 /**
  * Estimate reading time from raw content.
  * Average adult reads ~238 wpm; round up to nearest minute.
@@ -34,7 +41,7 @@ export async function getPosts() {
 	const posts: Post[] = await Promise.all(
 		Object.entries(modules).map(async ([path, resolver]) => {
 			const mod = (await resolver()) as {
-				metadata: Record<string, any>;
+				metadata: PostMetadata;
 				default: { render: () => { html: string } };
 			};
 			const slug = parse(path).name;
