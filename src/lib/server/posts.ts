@@ -4,9 +4,21 @@ export interface Post {
   slug: string;
   title: string;
   date: string;
+  formattedDate: string;
   excerpt: string;
   tags: string[];
   readingTime: string;
+}
+
+/**
+ * Format ISO date string to human-readable format (e.g., "Oct 15, 2025")
+ */
+function formatDate(isoDate: string): string {
+  const date = new Date(isoDate);
+  const month = date.toLocaleString('en-US', { month: 'short' });
+  const day = date.getDate();
+  const year = date.getFullYear();
+  return `${month} ${day}, ${year}`;
 }
 
 /**
@@ -50,6 +62,7 @@ export async function getPosts() {
         slug,
         title: mod.metadata.title || "",
         date: mod.metadata.date || "",
+        formattedDate: formatDate(mod.metadata.date || ""),
         excerpt: mod.metadata.excerpt || "",
         tags: mod.metadata.tags || [],
         readingTime,
