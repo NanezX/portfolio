@@ -28,9 +28,9 @@
   let field = $derived(!isExperience ? (item as Education).field : null);
 </script>
 
-<div class="relative pl-6 border-l-2 border-border hover:border-primary/60 transition-colors group">
+<div class="relative pl-6 border-l-3 border-border hover:border-primary/60 transition-colors group">
   <!-- Timeline dot -->
-  <div class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-bg border-2 border-border-hover group-hover:border-primary group-hover:bg-primary/20 transition-colors"></div>
+  <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-2 border-bg shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all"></div>
 
   <div class="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
     <!-- Header row -->
