@@ -16,6 +16,7 @@
 		"format:check": "prettier --check ."
 	},
 	"devDependencies": {
+		"@eslint/compat": "^2.0.2",
 		"@eslint/js": "^10.0.1",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.50.1",

@@ -1,56 +1,52 @@
+import prettier from 'eslint-config-prettier';
+import { fileURLToPath } from 'node:url';
+import { includeIgnoreFile } from '@eslint/compat';
 import js from '@eslint/js';
+import svelte from 'eslint-plugin-svelte';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import ts from 'typescript-eslint';
-import svelte from 'eslint-plugin-svelte';
-import prettier from 'eslint-plugin-prettier/recommended';
 import svelteConfig from './svelte.config.js';
 
-export default [
+const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
+
+export default defineConfig(
+	includeIgnoreFile(gitignorePath),
 	js.configs.recommended,
 	...ts.configs.recommended,
-	...svelte.configs['flat/recommended'],
+	...svelte.configs.recommended,
 	prettier,
-	...svelte.configs['flat/prettier'],
+	...svelte.configs.prettier,
 	{
 		languageOptions: {
 			globals: {
 				...globals.browser,
 				...globals.node
-			},
-			parserOptions: {
-				extraFileExtensions: ['.svelte']
 			}
+			// parserOptions: {
+			// 	extraFileExtensions: ['.svelte']
+			// }
 		},
-		// TODO: Fix these rules -  We should choose which ones to use exactly for the portfolio
 		rules: {
-			// Svelte-specific rules from project conventions
-			'svelte/require-each-key': 'error',
-			'svelte/no-at-html-tags': 'warn',
-			'svelte/no-at-debug-tags': 'warn',
-			'svelte/no-target-blank': 'error',
-			'svelte/no-navigation-without-resolve': 'off', // Disabled for now - external links use rel="external"
-			'svelte/indent': 'off', // let prettier handle this
-			'svelte/mustache-spacing': 'off', // let prettier handle this
-			'svelte/html-self-closing': 'off', // let prettier handle this
-			'svelte/max-attributes-per-line': 'off', // let prettier handle this
-
-			// TypeScript rules
-			'@typescript-eslint/no-explicit-any': 'error',
+			// typescript-eslint strongly recommend that you do not use the no-undef lint rule on TypeScript projects.
+			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+			'no-undef': 'off',
 			'@typescript-eslint/no-unused-vars': [
-				'warn',
+				'error',
 				{
-					argsIgnorePattern: '^_',
 					varsIgnorePattern: '^_',
-					caughtErrorsIgnorePattern: '^_'
+					argsIgnorePattern: '^_'
 				}
-			],
-			'@typescript-eslint/no-non-null-assertion': 'warn'
+			]
 		}
 	},
 	{
-		files: ['**/*.svelte'],
+		files: ['**/*.svelte', '**/*.svelte.ts'],
 		languageOptions: {
 			parserOptions: {
+				projectService: true,
+				extraFileExtensions: ['.svelte'],
+				parser: ts.parser,
 				svelteConfig
 			}
 		}
@@ -84,4 +80,4 @@ export default [
 			'.pnpm-store/'
 		]
 	}
-];
+);
