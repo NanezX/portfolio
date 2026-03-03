@@ -12,7 +12,7 @@
 	<link rel="icon" href={favicon} />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Personal portfolio showcasing my work and skills" />
-	<title>Portfolio - SvelteKit</title>
+	<title>NanezX - Portfolio</title>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
