@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { Clock, Tag } from 'lucide-svelte';
 
 	let { data } = $props();
@@ -23,7 +24,7 @@
 	{:else}
 		<div class="max-w-2xl space-y-6">
 			{#each data.posts as post}
-				<a href={`/journal/${post.slug}`} class="group block">
+				<a href={resolve(`/journal/${post.slug}`)} class="group block">
 					<article
 						class="bg-card border-border hover:border-primary/30 rounded-2xl border p-6 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]"
 					>

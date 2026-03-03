@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { PageData } from './$types';
 
 	let { data } = $props<{ data: PageData }>();
@@ -10,7 +11,7 @@
 
 <article class="mx-auto max-w-2xl px-6 py-20 md:px-12 lg:px-16">
 	<a
-		href="/journal"
+		href={resolve("/journal")}
 		class="text-muted hover:text-primary mb-8 inline-flex items-center text-sm transition-colors"
 	>
 		← Back to Journal

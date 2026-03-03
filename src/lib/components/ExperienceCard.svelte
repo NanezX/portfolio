@@ -48,7 +48,7 @@
 							<a
 								href={url}
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="noopener noreferrer external"
 								class="inline-flex items-center gap-1.5 underline-offset-4 hover:underline"
 							>
 								{title}

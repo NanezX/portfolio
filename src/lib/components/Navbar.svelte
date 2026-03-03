@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import { Menu, X } from 'lucide-svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
+	import { resolve } from '$app/paths';
 
 	let isOpen = $state(false);
 
@@ -10,7 +11,7 @@
 		{ name: 'Home', href: '/' },
 		{ name: 'Journal', href: '/journal' },
 		{ name: 'About', href: '/about' }
-	];
+	] as const;
 
 	function toggleMenu() {
 		isOpen = !isOpen;
@@ -22,7 +23,7 @@
 >
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 		<!-- Logo -->
-		<a href="/" class="group flex items-center gap-2">
+		<a href={resolve("/")} class="group flex items-center gap-2">
 			<img
 				src={logoIcon}
 				alt="Logo"
@@ -35,7 +36,7 @@
 			{#each navLinks as link (link.href)}
 				{@const isActive = page.url.pathname === link.href}
 				<a
-					href={link.href}
+					href={resolve(link.href)}
 					class={[
 						'group relative py-2 text-sm font-medium tracking-wide transition-colors',
 						{
@@ -82,7 +83,7 @@
 			{#each navLinks as link (link.href)}
 				{@const isActive = page.url.pathname === link.href}
 				<a
-					href={link.href}
+					href={resolve(link.href)}
 					class={[
 						'rounded-lg p-2 text-lg font-medium',
 						{

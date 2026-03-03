@@ -119,7 +119,7 @@
 									<a
 										href={job.companyUrl}
 										target="_blank"
-										rel="noopener noreferrer"
+										rel="noopener noreferrer external"
 										class="hover:text-primary transition-colors"
 									>
 										{job.company}
@@ -176,7 +176,7 @@
 									<a
 										href={edu.schoolUrl}
 										target="_blank"
-										rel="noopener noreferrer"
+										rel="noopener noreferrer external"
 										class="hover:text-primary transition-colors"
 									>
 										{edu.school}

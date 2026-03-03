@@ -21,7 +21,7 @@
 	<a
 		href={link.url}
 		target="_blank"
-		rel="noopener noreferrer"
+		rel="noopener noreferrer external"
 		class="group bg-card border-border hover:border-primary/50 relative flex cursor-pointer flex-col gap-4 overflow-hidden rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
 	>
 		<!-- Background Glow -->
