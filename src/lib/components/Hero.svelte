@@ -10,10 +10,6 @@
 
 <!-- TODO: Improve this, something more personal -->
 <section class="min-h-[80vh] flex flex-col justify-center relative overflow-hidden pt-20">
-  <!-- Glowing Background Orbs -->
-  <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-  <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-secondary/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
-
   <div class="max-w-5xl mx-auto px-6 relative z-10 text-center md:text-left">
     <div class="space-y-6 transition-all duration-1000 transform {visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}">
       <h2 class="text-primary font-medium tracking-wide text-lg flex items-center gap-2 justify-center md:justify-start">
@@ -30,9 +26,14 @@
         I'm Víctor Hernández — a software engineer with 5+ years of experience, from deep blockchain internals to AI engineering, agentic architectures, and production infrastructure.
       </p>
 
+      <div class="flex items-center gap-2 justify-center md:justify-start text-sm text-muted">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        Currently @ Hypercycle — building AI inference infrastructure
+      </div>
+
       <div class="pt-8 flex flex-wrap gap-4 justify-center md:justify-start">
         <a href="#projects" class="px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-primary/90 transition-all hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-          View Projects
+          See My Work ↓
         </a>
         <a href="/about" class="px-8 py-4 bg-card text-heading rounded-full font-semibold hover:bg-border transition-all border border-border hover:border-border-hover">
           About Me
