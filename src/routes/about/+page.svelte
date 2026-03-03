@@ -100,7 +100,7 @@
 						<div class="flex flex-wrap gap-1.5">
 							{#each job.technologies as tech, index (index)}
 								<span
-									class="text-xs font-medium px-3 py-1.5 rounded-full bg-card text-heading border border-[#374151] dark:border-zinc-600"
+									class="bg-card text-heading rounded-full border border-[#374151] px-3 py-1.5 text-xs font-medium dark:border-zinc-600"
 								>
 									{tech}
 								</span>
