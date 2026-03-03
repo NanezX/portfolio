@@ -4,20 +4,20 @@
 
 	const icons = [Code, Binary, Terminal, Braces, Cpu, Globe];
 
+	type FloatingItem = {
+		id: number;
+		component: typeof Code;
+		x: number;
+		y: number;
+		duration: number;
+		delay: number;
+		scale: number;
+		rotate: number;
+	};
+
 	// Create a fixed set of floating items to avoid hydration mismatches or performance issues
 	// We generate random positions for them
-	let floatingItems = $state<
-		{
-			id: number;
-			component: any;
-			x: number;
-			y: number;
-			duration: number;
-			delay: number;
-			scale: number;
-			rotate: number;
-		}[]
-	>([]);
+	let floatingItems = $state<FloatingItem[]>([]);
 
 	onMount(() => {
 		floatingItems = Array.from({ length: 5 }, (_, i) => ({
