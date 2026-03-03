@@ -112,7 +112,7 @@
 			<div class="mt-4 flex flex-wrap gap-1.5">
 				{#each technologies as tech, index (index)}
 					<span
-						class="bg-card text-muted border-border group-hover:border-primary/15 group-hover:text-body rounded-full border px-2.5 py-0.5 text-xs font-medium transition-colors"
+						class="text-xs font-medium px-3 py-1.5 rounded-full bg-card text-heading border border-[#374151] dark:border-zinc-600 transition-colors"
 					>
 						{tech}
 					</span>
