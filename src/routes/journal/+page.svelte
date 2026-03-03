@@ -9,7 +9,7 @@
     <meta name="description" content="Thoughts, tutorials, and snippets from my journey as a developer." />
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-6 py-20">
+<div class="w-full mx-auto px-6 md:px-12 lg:px-16 py-20">
     <header class="mb-12">
         <h1 class="text-4xl md:text-5xl font-bold text-heading mb-4">Journal</h1>
         <p class="text-muted text-lg">Thoughts, tutorials, and snippets.</p>
@@ -18,13 +18,13 @@
     {#if data.posts.length === 0}
         <p class="text-faint text-center py-20">No posts yet. Stay tuned!</p>
     {:else}
-        <div class="space-y-6">
+        <div class="space-y-6 max-w-2xl">
             {#each data.posts as post}
                 <a href={`/journal/${post.slug}`} class="block group">
-                    <article class="p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
+                    <article class="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.06)]">
                         <!-- Meta row -->
                         <div class="flex flex-wrap items-center gap-3 text-sm text-faint mb-3 font-mono">
-                            <time>{post.date}</time>
+                            <time>{post.formattedDate}</time>
                             <span class="text-border">|</span>
                             <span class="flex items-center gap-1">
                                 <Clock size={13} />
