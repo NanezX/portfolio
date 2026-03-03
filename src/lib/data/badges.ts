@@ -26,15 +26,15 @@ export const badgeCategories: BadgeCategory[] = [
 			},
 			{
 				label: 'LiteLLM',
-				url: 'https://img.shields.io/badge/LiteLLM-FF6B6B?style=flat&logo=python&logoColor=white'
+				url: 'https://img.shields.io/badge/LiteLLM-FF6B6B?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMyAyTDMgMTRoOWwtMSA4IDEwLTEyaC05bDEtOHoiLz48L3N2Zz4='
 			},
 			{
 				label: 'AI Agents',
-				url: 'https://img.shields.io/badge/AI_Agents-7C3AED?style=flat&logo=python&logoColor=white'
+				url: 'https://img.shields.io/badge/AI_Agents-7C3AED?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMyAyaC0ydjNINWEyIDIgMCAwMC0yIDJ2MTFhMiAyIDAgMDAyIDJoMTRhMiAyIDAgMDAyLTJWN2EyIDIgMCAwMC0yLTJoLTZWMnpNOSAxMmExLjUgMS41IDAgMTEwLTMgMS41IDEuNSAwIDAxMCAzem02IDBhMS41IDEuNSAwIDExMC0zIDEuNSAxLjUgMCAwMTAgM3ptLTYgMi41aDZ2Mkg5di0yeiIvPjwvc3ZnPg=='
 			},
 			{
 				label: 'Agentic Pipelines',
-				url: 'https://img.shields.io/badge/Agentic_Pipelines-8B5CF6?style=flat&logo=python&logoColor=white'
+				url: 'https://img.shields.io/badge/Agentic_Pipelines-8B5CF6?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxjaXJjbGUgY3g9IjQiIGN5PSIxMiIgcj0iMyIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iNSIgcj0iMyIvPjxjaXJjbGUgY3g9IjIwIiBjeT0iMTkiIHI9IjMiLz48cGF0aCBkPSJNNyAxMWwxMC01TTcgMTNsMTAgNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4='
 			}
 		]
 	},
@@ -171,15 +171,15 @@ export const badgeCategories: BadgeCategory[] = [
 			},
 			{
 				label: 'Foundry',
-				url: 'https://img.shields.io/badge/Foundry-FF9F1C?style=flat&logo=forge&logoColor=white'
+				url: 'https://img.shields.io/badge/Foundry-FF9F1C?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzguMSAyIDUgNS42IDUgMTBjMCAyLjQgMSA0LjUgMi41IDZINHY0aDE2di00aC0zLjVjMS41LTEuNSAyLjUtMy42IDIuNS02IDAtNC40LTMuMS04LTctOHptMCAyYzIuOCAwIDUgMi43IDUgNnMtMi4yIDYtNSA2LTUtMi43LTUtNiAyLjItNiA1LTZ6Ii8+PC9zdmc+'
 			},
 			{
 				label: 'Hardhat',
-				url: 'https://img.shields.io/badge/Hardhat-F5DEB3?style=flat&logo=npm&logoColor=black'
+				url: 'https://img.shields.io/badge/Hardhat-FFF100?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iYmxhY2siPjxwYXRoIGQ9Ik0yIDE4aDIwdjNIMnptMS0yYzAtMS43IDEuMy0zIDMtM3YtMi41QzYgNy41IDguNyA0IDEyIDRzNiAzLjUgNiA4LjVWMTNjMS43IDAgMyAxLjMgMyAzSDN6bTYtM2g2di0yLjVDMTUgOC42IDEzLjcgNiAxMiA2UzkgOC42IDkgMTAuNVYxM3oiLz48L3N2Zz4='
 			},
 			{
 				label: 'The Graph',
-				url: 'https://img.shields.io/badge/The_Graph-6775E0?style=flat&logo=the-graph&logoColor=white'
+				url: 'https://img.shields.io/badge/The_Graph-6775E0?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxjaXJjbGUgY3g9IjE4LjUiIGN5PSI1LjUiIHI9IjIuNSIvPjxjaXJjbGUgY3g9IjUuNSIgY3k9IjE4IiByPSIyIi8+PHBhdGggZD0iTTE4IDdMNiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xMiAyLjVhOS41IDkuNSAwIDEwMCAxOSA5LjUgOS41IDAgMDAwLTE5em0wIDJhNy41IDcuNSAwIDExMCAxNSA3LjUgNy41IDAgMDEwLTE1eiIgZmlsbD0id2hpdGUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg=='
 			},
 			{
 				label: 'EVM Internals',
