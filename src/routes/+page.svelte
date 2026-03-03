@@ -47,6 +47,11 @@
     ];
 </script>
 
+<svelte:head>
+    <title>Víctor Hernández</title>
+    <meta name="description" content="Víctor Hernández — Software Engineer. Homepage and projects." />
+</svelte:head>
+
 <Hero />
 
 <section id="projects" class="py-20 w-full mx-auto px-6 md:px-12 lg:px-16 xl:px-20">
