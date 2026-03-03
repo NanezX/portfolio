@@ -8,7 +8,7 @@
     <title>{data.meta.title} - Journal</title>
 </svelte:head>
 
-<article class="max-w-3xl mx-auto px-6 py-20">
+<article class="w-full mx-auto px-6 md:px-12 lg:px-16 py-20">
     <header class="mb-12 text-center">
         <div class="flex items-center justify-center gap-4 text-sm text-faint mb-6 font-mono">
             <time>{data.meta.date}</time>
