@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>About & CV – Víctor Hernández</title>
+    <title>About - Víctor Hernández</title>
     <meta name="description" content="Víctor Hernández — Software Engineer. Professional experience, education, and technical skills." />
 </svelte:head>
 
